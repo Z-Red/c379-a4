@@ -109,8 +109,6 @@ void systemResourceOutput(vector<Resource> r) {
 // The monitor thread -- output information every monitor time milliseconds.
 void* monitorFunc(void* arg) {
 
-    arg == nullptr;
-
     while (true) {
         this_thread::sleep_for(chrono::milliseconds(monitorTime));
 
@@ -124,8 +122,6 @@ void* monitorFunc(void* arg) {
 
 // The task thread -- aquire and hold resources for a period of time.
 void* taskFunc(void* arg) {
-
-    arg == nullptr;
 
     // Determine task index
     int idx;

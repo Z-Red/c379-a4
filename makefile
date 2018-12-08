@@ -4,7 +4,7 @@ CXXFLAGS= -std=c++11 -Wall -Wextra -Wreturn-type
 all: a4tasks
 
 a4tasks: a4tasks.cpp
-	$(CXX) $(CXXFLAGS) a4tasks.cpp -o a4tasks
+	$(CXX) $(CXXFLAGS) -pthread a4tasks.cpp -o a4tasks
 
 tar:
 	tar -cvf submit.tar a4tasks.cpp makefile a4report.pdf Tokenizer.h 
