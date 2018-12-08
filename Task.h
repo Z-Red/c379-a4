@@ -2,6 +2,7 @@
  * CMPUT 379 - Assignment 4
  * Araien (Zach) Redfern
  * 
+ * Models a task.
  */ 
 
 #pragma once
@@ -61,18 +62,12 @@ public:
         }
     }
 
-    //void addResName(string s) { resNames.push_back(s); }
-
-
 private:
 
     string name;
     pthread_t tid;
     unordered_map<string, int> resMap;
 
-    //vector<string> resNames;
-
-    // TODO:
     int runTime;
     int idleTime;
     int busyTime;

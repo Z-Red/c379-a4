@@ -2,6 +2,7 @@
  * CMPUT 379 - Assignment 4
  * Araien (Zach) Redfern
  * 
+ * Models a resources.
  */
 
 #pragma once
@@ -14,12 +15,10 @@ class Resource {
 public:
 
     Resource(string n, int u) : name(n), numUnits(u), numAvailable(u) {
-        //available = true;
         numHeld = 0;
     };
 
     string getName() { return name; }
-    //bool isAvailable() { return available; }
 
     int getTotalUnits() { return numUnits; }
     int getNumAvailable() { return numAvailable; }
@@ -41,7 +40,4 @@ private:
     int numUnits;
     int numAvailable;
     int numHeld;
-
-    // TODO: How to handle which unit is available
-    //bool available;
 };

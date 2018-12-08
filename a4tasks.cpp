@@ -44,7 +44,7 @@ std::chrono::milliseconds calculateRunTime() {
 
 void taskOutput(Task t, int numIter) {
     std::chrono::milliseconds runTime = calculateRunTime();
-    printf("task %s (tid= %lu, iter= %d, time= %lld msec)\n", t.getName().c_str(), (unsigned long)t.getTID(), numIter, runTime.count());
+    printf("task %s (tid= %lu, iter= %d, time= %ld msec)\n", t.getName().c_str(), (unsigned long)t.getTID(), numIter, runTime.count());
 }
 
 
@@ -106,11 +106,10 @@ void systemResourceOutput(vector<Resource> r) {
     return;
 }
 
+// The monitor thread -- output information every monitor time milliseconds.
 void* monitorFunc(void* arg) {
 
-
-
-    arg = nullptr;
+    arg == nullptr;
 
     while (true) {
         this_thread::sleep_for(chrono::milliseconds(monitorTime));
@@ -120,14 +119,13 @@ void* monitorFunc(void* arg) {
         monitorPrinting = false;
     }
 
-
-
     return ((void*)0);
 }
 
+// The task thread -- aquire and hold resources for a period of time.
 void* taskFunc(void* arg) {
 
-    arg = nullptr;
+    arg == nullptr;
 
     // Determine task index
     int idx;
@@ -327,7 +325,7 @@ int main(int argc, char* argv[]) {
     // Print exit information
     systemTaskOutput(taskList, resList);
     systemResourceOutput(resList);
-    printf("Running time= %lld msec\n", calculateRunTime().count());
+    printf("Running time= %ld msec\n", calculateRunTime().count());
     return 0;
 }
 
