@@ -32,6 +32,7 @@ int NITER;
 int monitorTime;
 bool monitorPrinting = false;
 
+
 vector<Task> taskList;
 vector<Resource> resList;
 chrono::steady_clock::time_point startTime = std::chrono::steady_clock::now();
@@ -317,6 +318,8 @@ int main(int argc, char* argv[]) {
         }
 
     }
+
+    sleep(1);
 
     // Print exit information
     systemTaskOutput(taskList, resList);
